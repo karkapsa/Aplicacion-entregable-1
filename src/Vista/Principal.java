@@ -1,3 +1,9 @@
+package Vista;
+
+
+import Logica.Pitagoras;
+import teoremapitagoras.TeoremaPitagoras;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,14 +15,6 @@
  * @author 15
  */
 public class Principal extends javax.swing.JFrame {
-    double hipotenusa;
-
-public double CalcularHipotenusa (double lado1, double lado2) {
-	hipotenusa = Math.sqrt (Math.pow (lado1,2)+ Math.pow (lado2,2));
-	return hipotenusa;
-	}
-}
-
     
     public Principal() {
         initComponents();
@@ -37,7 +35,7 @@ public double CalcularHipotenusa (double lado1, double lado2) {
         btnCalcular = new javax.swing.JButton();
         txtLado1 = new javax.swing.JTextField();
         txtLado2 = new javax.swing.JTextField();
-        Hipotenusa = new javax.swing.JTextField();
+        txthipotenusa = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -73,9 +71,7 @@ public double CalcularHipotenusa (double lado1, double lado2) {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(txtLado1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addComponent(txtLado1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(30, 30, 30)))
@@ -88,10 +84,13 @@ public double CalcularHipotenusa (double lado1, double lado2) {
                             .addComponent(txtLado2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Hipotenusa))))
-                .addContainerGap(21, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txthipotenusa)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addComponent(jLabel3)
+                                .addGap(0, 59, Short.MAX_VALUE)))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,7 +104,7 @@ public double CalcularHipotenusa (double lado1, double lado2) {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtLado1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtLado2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Hipotenusa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txthipotenusa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnCalcular)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -124,6 +123,17 @@ public double CalcularHipotenusa (double lado1, double lado2) {
 
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
         // TODO add your handling code here:
+        Pitagoras pi=new Pitagoras();
+        try {
+            double lado1 = Double.parseDouble (txtLado1.getText());
+            double lado2 = Double.parseDouble (txtLado2.getText());
+
+            double hipotenusa = pi.CalcularHipotenusa (lado1, lado2);
+
+            txthipotenusa.setText (String.valueOf (hipotenusa));
+
+            } catch (Exception e) {}
+        
     }//GEN-LAST:event_btnCalcularActionPerformed
 
     /**
@@ -162,12 +172,12 @@ public double CalcularHipotenusa (double lado1, double lado2) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Hipotenusa;
     private javax.swing.JButton btnCalcular;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField txtLado1;
     private javax.swing.JTextField txtLado2;
+    private javax.swing.JTextField txthipotenusa;
     // End of variables declaration//GEN-END:variables
 }

@@ -6,17 +6,18 @@
 
 package teoremapitagoras;
 
+import Vista.Principal;
+
 /**
  *
  * @author 15
  */
 public class TeoremaPitagoras {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        Principal p = new Principal();
+        p.setVisible(true);
     }
     
 }

@@ -32,7 +32,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
-        jMenu5 = new javax.swing.JMenu();
+        Jmenu1 = new javax.swing.JMenu();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
         jMenu6 = new javax.swing.JMenu();
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
@@ -47,20 +47,30 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jMenu1.setText("Archivo");
 
         jMenu4.setText("Salir");
+        jMenu4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu4MouseClicked(evt);
+            }
+        });
         jMenu1.add(jMenu4);
 
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Formularios");
-
-        jMenu5.setText("Teorema de Pitagoras");
-        jMenu5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jMenu5.addMouseListener(new java.awt.event.MouseAdapter() {
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu5MouseClicked(evt);
+                jMenu2MouseClicked(evt);
             }
         });
-        jMenu2.add(jMenu5);
+
+        Jmenu1.setText("Teorema de Pitagoras");
+        Jmenu1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Jmenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Jmenu1MouseClicked(evt);
+            }
+        });
+        jMenu2.add(Jmenu1);
         jMenu2.add(jSeparator2);
 
         jMenu6.setText("Area de la Circunferencia");
@@ -99,12 +109,27 @@ public class FrmPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenu5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu5MouseClicked
-FrmPitagoras pitagoras = new FrmPitagoras();
+    private void Jmenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Jmenu1MouseClicked
+        FrmPitagoras pitagoras = new FrmPitagoras();
         pitagoras.setVisible(true);         
-        pitagoras.setDefaultCloseOperation(pitagoras.DISPOSE_ON_CLOSE);
+        pitagoras.setDefaultCloseOperation(FrmPitagoras.DISPOSE_ON_CLOSE);
+               
+           
         
-    }//GEN-LAST:event_jMenu5MouseClicked
+        
+                       
+       
+    }//GEN-LAST:event_Jmenu1MouseClicked
+
+    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
+         // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jMenu2MouseClicked
+
+    private void jMenu4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu4MouseClicked
+        // TODO add your handling code here:
+            this.dispose();
+    }//GEN-LAST:event_jMenu4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -135,6 +160,7 @@ FrmPitagoras pitagoras = new FrmPitagoras();
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new FrmPrincipal().setVisible(true);
             }
@@ -142,11 +168,11 @@ FrmPitagoras pitagoras = new FrmPitagoras();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu Jmenu1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenu jMenu8;

@@ -6,10 +6,18 @@
 
 package Logica;
 
+import Vista.FrmAreaCircunferencia;
+
 /**
  *
  * @author 15
  */
 public class AreaCircunferencia {
-    
+               double Area,Area2; 
+                    
+ public double Areacircun (double Radio){
+     Area= (Math.pow(Radio,2));
+     Area2=Math.PI*Area;
+     return Area2;
+           }
 }

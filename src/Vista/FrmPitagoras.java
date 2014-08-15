@@ -1,10 +1,7 @@
-package Vista;
+package Vista;  
 
 
 import Logica.Pitagoras;
-import teoremapitagoras.TeoremaPitagoras;
-import java.lang.System.*;
-import javax.swing.JFrame;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -151,15 +148,16 @@ public class FrmPitagoras extends javax.swing.JFrame {
 
             txthipotenusa.setText (String.valueOf (hipotenusa));
 
-            } catch (Exception e) {}
+            } catch (NumberFormatException e) {}
         
     }//GEN-LAST:event_btnCalcularActionPerformed
 
     private void btnCerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCerrarMouseClicked
+  
     }//GEN-LAST:event_btnCerrarMouseClicked
 
     private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
-             System.exit(0); 
+             this.dispose();
     }//GEN-LAST:event_btnCerrarActionPerformed
 
     /**
@@ -191,6 +189,7 @@ public class FrmPitagoras extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new FrmPitagoras().setVisible(true);
             }

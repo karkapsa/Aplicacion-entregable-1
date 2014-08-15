@@ -70,10 +70,20 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 Jmenu1MouseClicked(evt);
             }
         });
+        Jmenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Jmenu1ActionPerformed(evt);
+            }
+        });
         jMenu2.add(Jmenu1);
         jMenu2.add(jSeparator2);
 
         jMenu6.setText("Area de la Circunferencia");
+        jMenu6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu6MouseClicked(evt);
+            }
+        });
         jMenu2.add(jMenu6);
         jMenu2.add(jSeparator3);
 
@@ -111,25 +121,31 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
     private void Jmenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Jmenu1MouseClicked
         FrmPitagoras pitagoras = new FrmPitagoras();
-        pitagoras.setVisible(true);         
-        pitagoras.setDefaultCloseOperation(FrmPitagoras.DISPOSE_ON_CLOSE);
-               
-           
+        pitagoras.setVisible(true);  
+         pitagoras.setDefaultCloseOperation(FrmPitagoras.DISPOSE_ON_CLOSE);
         
-        
-                       
-       
     }//GEN-LAST:event_Jmenu1MouseClicked
 
     private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
          // TODO add your handling code here:
         
     }//GEN-LAST:event_jMenu2MouseClicked
-
+  
     private void jMenu4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu4MouseClicked
         // TODO add your handling code here:
             this.dispose();
     }//GEN-LAST:event_jMenu4MouseClicked
+
+    private void Jmenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jmenu1ActionPerformed
+         
+    }//GEN-LAST:event_Jmenu1ActionPerformed
+
+    private void jMenu6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu6MouseClicked
+        // TODO add your handling code here:
+        FrmAreaCircunferencia circun = new FrmAreaCircunferencia();
+        circun.setVisible(true); 
+          circun.setDefaultCloseOperation(FrmPitagoras.DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_jMenu6MouseClicked
 
     /**
      * @param args the command line arguments

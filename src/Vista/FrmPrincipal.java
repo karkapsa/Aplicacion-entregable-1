@@ -88,10 +88,20 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jMenu2.add(jSeparator3);
 
         jMenu7.setText("Corriente Cto Paralelo");
+        jMenu7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu7MouseClicked(evt);
+            }
+        });
         jMenu2.add(jMenu7);
         jMenu2.add(jSeparator1);
 
         jMenu8.setText("Corriente Cto Serie");
+        jMenu8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu8MouseClicked(evt);
+            }
+        });
         jMenu2.add(jMenu8);
 
         jMenuBar1.add(jMenu2);
@@ -99,6 +109,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jMenu3.setText("Acerca");
 
         jMenu9.setText("Acerca de");
+        jMenu9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu9MouseClicked(evt);
+            }
+        });
         jMenu3.add(jMenu9);
 
         jMenuBar1.add(jMenu3);
@@ -146,6 +161,27 @@ public class FrmPrincipal extends javax.swing.JFrame {
         circun.setVisible(true); 
           circun.setDefaultCloseOperation(FrmPitagoras.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jMenu6MouseClicked
+
+    private void jMenu7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu7MouseClicked
+                FrmCtoParalelo Cparalelo = new FrmCtoParalelo();  
+                Cparalelo.setVisible(true); 
+                Cparalelo.setDefaultCloseOperation(FrmPitagoras.DISPOSE_ON_CLOSE);
+            // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu7MouseClicked
+
+    private void jMenu8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu8MouseClicked
+        // TODO add your handling code here:
+        FrmCtoSerie Cserie = new FrmCtoSerie();
+        Cserie.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenu8MouseClicked
+
+    private void jMenu9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu9MouseClicked
+        // TODO add your handling code here:
+        FrmSobren Sobre = new FrmSobren();
+        Sobre.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenu9MouseClicked
 
     /**
      * @param args the command line arguments

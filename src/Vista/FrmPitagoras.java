@@ -39,33 +39,42 @@ public class FrmPitagoras extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(getIconImage());
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("Lado1:");
+        jLabel1.setText("CATETO A");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 14, -1, -1));
 
-        jLabel2.setText("Lado2:");
+        jLabel2.setText("CATETO B");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 45, -1, -1));
 
-        jLabel3.setText("Hipotenusa:");
+        jLabel3.setText("HIPOTENUSA");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 71, -1, -1));
 
-        btnCalcular.setIcon(new javax.swing.ImageIcon("C:\\Users\\JuanDiego\\Documents\\NetBeansProjects\\Men-\\boton-calcular.png")); // NOI18N
+        btnCalcular.setText("Calcular Hipotenusa");
         btnCalcular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCalcularActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, 36));
 
         txtLado1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtLado1ActionPerformed(evt);
             }
         });
+        getContentPane().add(txtLado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(163, 11, 103, -1));
 
         txtLado2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtLado2ActionPerformed(evt);
             }
         });
+        getContentPane().add(txtLado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(163, 42, 103, -1));
+        getContentPane().add(txthipotenusa, new org.netbeans.lib.awtextra.AbsoluteConstraints(131, 68, 149, -1));
 
-        btnCerrar.setIcon(new javax.swing.ImageIcon("C:\\Users\\JuanDiego\\Documents\\NetBeansProjects\\Men-\\boton_regresar.jpg")); // NOI18N
+        btnCerrar.setText("Menú");
         btnCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnCerrarMouseClicked(evt);
@@ -76,73 +85,21 @@ public class FrmPitagoras extends javax.swing.JFrame {
                 btnCerrarActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, -1, 39));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\JuanDiego\\Documents\\NetBeansProjects\\Men-\\pitagoras3.jpg")); // NOI18N
-        jLabel4.setText("jLabel4");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
-                        .addComponent(btnCerrar))
-                    .addComponent(jLabel3)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(txthipotenusa, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel1)
-                                .addComponent(jLabel2))
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtLado1, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
-                                .addComponent(txtLado2)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(txtLado1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtLado2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txthipotenusa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnCerrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnCalcular, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/images.jpg"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 170));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtLado1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLado1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtLado1ActionPerformed
-
     private void txtLado2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLado2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtLado2ActionPerformed
+
+    private void txtLado1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLado1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLado1ActionPerformed
 
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
         // TODO add your handling code here:
@@ -155,17 +112,17 @@ public class FrmPitagoras extends javax.swing.JFrame {
 
             txthipotenusa.setText (String.valueOf (hipotenusa));
 
-            } catch (NumberFormatException e) {}
-        
+        } catch (NumberFormatException e) {}
+
     }//GEN-LAST:event_btnCalcularActionPerformed
 
-    private void btnCerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCerrarMouseClicked
-  
-    }//GEN-LAST:event_btnCerrarMouseClicked
-
     private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
-             this.dispose();
+        this.dispose();
     }//GEN-LAST:event_btnCerrarActionPerformed
+
+    private void btnCerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCerrarMouseClicked
+
+    }//GEN-LAST:event_btnCerrarMouseClicked
 
     /**
      * @param args the command line arguments

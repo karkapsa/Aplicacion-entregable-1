@@ -6,20 +6,18 @@
 
 package Logica;
 
-import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
  *
- * @author JuanDiego
+ * @author Andres
  */
-public class AreaCircunferenciaTest {
+public class PitagorasIT {
     
-    public AreaCircunferenciaTest() {
+    public PitagorasIT() {
     }
     
     @BeforeClass
@@ -29,28 +27,21 @@ public class AreaCircunferenciaTest {
     @AfterClass
     public static void tearDownClass() {
     }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
 
     /**
-     * Test of Areacircun method, of class AreaCircunferencia.
+     * Test of CalcularHipotenusa method, of class Pitagoras.
      */
     @Test
-    public void testAreacircun() {
-        System.out.println("Areacircun");
-        double Radio = 3;
-        AreaCircunferencia instance = new AreaCircunferencia();
-        double expResult = 28.274333882308138;
-        double result = instance.Areacircun(Radio);
+    public void testCalcularHipotenusa() {
+        System.out.println("CalcularHipotenusa");
+        double lado1 = 2.0;
+        double lado2 = 3.0;
+        Pitagoras instance = new Pitagoras();
+        double expResult = 3.605551275463989;
+        double result = instance.CalcularHipotenusa(lado1, lado2);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
-       
+        //fail("The test case is a prototype.");
     }
     
 }

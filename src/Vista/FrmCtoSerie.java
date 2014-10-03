@@ -52,14 +52,14 @@ public class FrmCtoSerie extends javax.swing.JFrame {
 
         jLabel2.setText("R2:");
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\JuanDiego\\Documents\\NetBeansProjects\\Men-\\boton-calcular.png")); // NOI18N
+        jButton1.setText("Calcular");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
             }
         });
 
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\JuanDiego\\Documents\\NetBeansProjects\\Men-\\boton_regresar.jpg")); // NOI18N
+        jButton2.setText("Menú");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -67,8 +67,6 @@ public class FrmCtoSerie extends javax.swing.JFrame {
         });
 
         jLabel5.setText("Resultado:");
-
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\JuanDiego\\Documents\\NetBeansProjects\\Men-\\100px-TE_Compon_01.svg.png")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -93,9 +91,9 @@ public class FrmCtoSerie extends javax.swing.JFrame {
                                 .addComponent(jLabel4))
                             .addComponent(jLabel5)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1)
-                                .addGap(28, 28, 28)
-                                .addComponent(jButton2))))
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(57, 57, 57)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(57, 57, 57)
                         .addComponent(lblresultado, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -125,11 +123,11 @@ public class FrmCtoSerie extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblresultado, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();

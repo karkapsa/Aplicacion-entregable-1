@@ -6,20 +6,18 @@
 
 package Logica;
 
-import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
  *
- * @author JuanDiego
+ * @author Andres
  */
-public class CtoSerieTest {
+public class AreaCircunferenciaIT {
     
-    public CtoSerieTest() {
+    public AreaCircunferenciaIT() {
     }
     
     @BeforeClass
@@ -29,28 +27,20 @@ public class CtoSerieTest {
     @AfterClass
     public static void tearDownClass() {
     }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
 
-  
+    /**
+     * Test of Areacircun method, of class AreaCircunferencia.
+     */
     @Test
-    public void testCalcircu() {
-        System.out.println("calcircu");
-        double r1 = 3;
-        double r2 = 3;
-        double r3 = 3;
-        CtoSerie instance = new CtoSerie();
-        double expResult = 10;
-        double result = instance.calcircu(r1, r2, r3);
+    public void testAreacircun() {
+        System.out.println("Areacircun");
+        double Radio = 7.0;
+        AreaCircunferencia instance = new AreaCircunferencia();
+        double expResult = 153.93804002589985;
+        double result = instance.Areacircun(Radio);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
-        
+        //fail("The test case is a prototype.");
     }
     
 }
